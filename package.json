@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker run -d --name redis-session -p 6379:6379 redis && node src/index.js",
+    "stop": "docker stop redis-session && docker rm redis-session"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "redis": "^4.7.0"
+  }
+}
